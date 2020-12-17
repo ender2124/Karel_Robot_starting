@@ -1,0 +1,60 @@
+/*
+F1 = moveForward();
+F2 = turnLeft();
+F3 = turnAround();
+F4 = turnRight();
+F5 = pickBeeper();
+F6 = dropBeeper();
+*/
+
+/* FELIPE 04.12.2020*/
+/* 1.4.1 stealOlympicFire */
+
+void  stealOlympicFire ()
+{
+    moveForward();
+    repeat (6)
+    {
+        if (! onBeeper())
+        {
+            climbingStairs ();   
+        }
+        if (onBeeper())
+        {
+            pickBeeper();
+        }
+    }
+    
+    bajando();
+}
+
+void climbingStairs ()
+{
+    
+    turnLeft();
+    moveForward();
+    turnRight();
+    moveForward();
+    
+}
+
+void bajando()
+{
+    moveForward();
+    turnRight();
+    repeat (7)
+    {
+        if (frontIsClear())
+        {
+            moveForward();
+            
+        }
+        
+        else
+        {
+            turnLeft();
+            moveForward();
+        }
+    }
+    
+}

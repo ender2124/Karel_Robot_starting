@@ -1,0 +1,54 @@
+/*
+F1 = moveForward();
+F2 = turnLeft();
+F3 = turnAround();
+F4 = turnRight();
+F5 = pickBeeper();
+F6 = dropBeeper();
+*/
+
+/* FELIPE 23.11.2020*/
+/* 1.2.4 mowTheLawn */
+
+
+void mowTheLawn ()
+{
+    repeat (3)
+    {
+        repeat (6)
+        {
+            picking();
+        }
+        
+        turningMinus ();
+        
+        repeat (6)
+        {
+            picking();
+        }
+        
+        turningPlus ();
+    }   
+}
+
+void picking ()
+{    
+    moveForward();
+    pickBeeper();
+}
+
+void turningMinus ()
+{
+    moveForward();
+    turnLeft();
+    moveForward();
+    turnLeft();
+}
+
+void turningPlus ()
+{
+    moveForward();
+    turnRight();
+    moveForward();
+    turnRight();
+}

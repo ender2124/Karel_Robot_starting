@@ -1,0 +1,47 @@
+/*
+F1 = moveForward();
+F2 = turnLeft();
+F3 = turnAround();
+F4 = turnRight();
+F5 = pickBeeper();
+F6 = dropBeeper();
+*/
+
+/* FELIPE 03.12.2020*/
+/* 1.3.4 tileTheFloor */
+
+void tileTheFloor ()
+{
+    
+    leavingBeeper (); 
+    
+}
+
+void leavingBeeper ()
+{
+    repeat (85)
+    {          
+        
+        if (beeperAhead())
+        {
+            dropBeeper();
+            turnLeft();
+            moveForward();
+        } 
+        
+        if (frontIsClear() && !beeperAhead() )
+        {
+            dropBeeper();
+            moveForward();
+        }
+        else 
+        {
+            dropBeeper();
+            turnLeft();
+            moveForward();
+        }    
+    }
+    dropBeeper();
+    turnLeft();   
+}
+

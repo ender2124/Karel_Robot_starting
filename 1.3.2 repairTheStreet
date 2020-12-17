@@ -1,0 +1,51 @@
+/*
+F1 = moveForward();
+F2 = turnLeft();
+F3 = turnAround();
+F4 = turnRight();
+F5 = pickBeeper();
+F6 = dropBeeper();
+*/
+
+/* FELIPE 24.11.2020*/
+/* 1.3.2 repairTheStreet */
+
+void repairTheStreet ()
+{ 
+    repeat (10)
+    {
+        CheckHole();
+    }   
+}   
+
+void CheckHole ()
+{
+    if(rightIsClear() )
+    {
+        leaveBeeper();    
+    }
+    
+    else
+    {
+        moveForward();
+    }
+}  
+
+void leaveBeeper()
+{
+    turnRight();
+    moveForward();
+    dropBeeper();
+    turnAround();
+    moveForward();
+    turnRight();
+    adelante();
+}
+
+void adelante()
+{
+     if(frontIsClear() )
+    {
+        moveForward();    
+    }
+}

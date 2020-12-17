@@ -1,0 +1,42 @@
+/*
+F1 = moveForward();
+F2 = turnLeft();
+F3 = turnAround();
+F4 = turnRight();
+F5 = pickBeeper();
+F6 = dropBeeper();
+*/
+
+/* FELIPE 04.12.2020*/
+/* 1.4.2 removeTheTiles */
+
+void  removeTheTiles ()
+{
+    peakingBeeper();
+}
+
+void peakingBeeper()
+
+{
+    repeat (97)
+    {
+        
+        if (!frontIsClear())
+        {
+            pickBeeper();
+            turnLeft();
+            moveForward();
+        } 
+        if ( beeperAhead() && frontIsClear() )
+        {
+            pickBeeper();
+            moveForward();
+        }
+        else 
+        {
+            pickBeeper();
+            turnLeft();
+            moveForward();
+        } 
+    }   
+}

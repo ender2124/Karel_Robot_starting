@@ -1,0 +1,46 @@
+/*
+F1 = moveForward();
+F2 = turnLeft();
+F3 = turnAround();
+F4 = turnRight();
+F5 = pickBeeper();
+F6 = dropBeeper();
+*/
+
+/* FELIPE 22.11.2020*/
+/* 1.1.1 obtainArtifact */
+
+void obtainArtifact()
+{
+    turnRight();
+    lookBeeper ();
+    backHome();
+    
+}
+
+void lookBeeper ()
+{
+    moveForward();
+    turnLeft();
+    repeat (3)
+    {
+        moveForward();
+    }
+    turnLeft();
+    moveForward();
+    pickBeeper();
+}
+
+void backHome ()
+{
+    moveForward();
+    turnLeft();
+    repeat (3)
+    {
+        moveForward();
+    }
+    turnLeft();
+    moveForward();
+    dropBeeper();
+    
+}

@@ -1,0 +1,34 @@
+/*
+F1 = moveForward();
+F2 = turnLeft();
+F3 = turnAround();
+F4 = turnRight();
+F5 = pickBeeper();
+F6 = dropBeeper();
+*/
+
+/* FELIPE 22.11.2020*/
+/* 1.1.4 practiceHomeRun */
+
+void practiceHomeRun()
+{
+    repeat (4)
+    {
+    pickOneBomb();
+    }  
+}
+
+void pickOneBomb()
+{
+    xsteps();
+    pickBeeper();  
+}
+
+void xsteps ()
+{
+    repeat (9) 
+    {
+        moveForward();
+    }
+    turnLeft();
+}   

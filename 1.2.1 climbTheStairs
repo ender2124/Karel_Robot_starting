@@ -1,0 +1,28 @@
+/*
+F1 = moveForward();
+F2 = turnLeft();
+F3 = turnAround();
+F4 = turnRight();
+F5 = pickBeeper();
+F6 = dropBeeper();
+*/
+
+/* FELIPE 22.11.2020*/
+/* 1.2.1 climbTheStairs */
+
+void  climbTheStairs ()
+{
+    moveForward();
+    climbingStairs ();
+}
+
+void climbingStairs ()
+{
+    repeat (6)
+    {
+        turnLeft();
+        moveForward();
+        turnRight();
+        moveForward();
+    }
+}

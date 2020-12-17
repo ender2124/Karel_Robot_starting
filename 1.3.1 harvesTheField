@@ -1,0 +1,46 @@
+/*
+F1 = moveForward();
+F2 = turnLeft();
+F3 = turnAround();
+F4 = turnRight();
+F5 = pickBeeper();
+F6 = dropBeeper();
+*/
+
+/* FELIPE 24.11.2020*/
+/* 1.3.1 harvesTheField */
+
+void harvestTheField ()
+{ 
+    recolecting(); 
+    toPosition();
+    recolecting();
+    
+    turnAround();
+    
+    recolecting(); 
+    toPosition();
+    recolecting();
+}
+
+void recolecting()
+{
+    repeat (4)
+    {
+        moveForward();
+        pickBeeper();
+        turnRight();
+        moveForward();
+        turnLeft();
+    }
+}
+
+void toPosition()
+{
+    repeat (2)
+    {
+        moveForward();
+        moveForward();
+        turnLeft();   
+    }  
+}

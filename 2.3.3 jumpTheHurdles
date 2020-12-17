@@ -1,0 +1,52 @@
+/*
+F1 = moveForward();
+F2 = turnLeft();
+F3 = turnAround();
+F4 = turnRight();
+F5 = pickBeeper();
+F6 = dropBeeper();
+*/
+
+/* FELIPE 22.11.2020*/
+
+void jumpTheHurdles()
+{
+    while(! onBeeper())
+    {
+      goToNextColum();  
+    }
+    
+}
+
+void goToNextColum()
+
+{
+    if (frontIsClear())
+    {
+        moveForward();
+    }
+    else
+    {
+        jumOneHurdle(); 
+    }
+}
+
+void jumOneHurdle()
+
+{
+    turnLeft();
+    while (!rightIsClear())
+    {
+        moveForward(); 
+    }
+    
+    turnRight();
+    moveForward();
+    turnRight();
+    
+    while(frontIsClear())
+    {
+        moveForward();
+    }
+    turnLeft();
+}
